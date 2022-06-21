@@ -1,14 +1,16 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  
+  let reversedIndex = word.length - 1;
+  for (let i = 0; i < word.length; i++){
+    let letter = word[reversedIndex];
+
+    if (letter !== word[i]){
+      return false;
+    }
+    reversedIndex--;
+  }
+  return true;
 }
-
-/* 
-  Add your pseudocode here
-*/
-
-/*
-  Add written explanation of your solution here
-*/
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
